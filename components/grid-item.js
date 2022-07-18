@@ -1,24 +1,21 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import {
-  Box,
-  Text,
-  LinkBox,
-  LinkOverlay
-} from '@chakra-ui/react'
+import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => {
   return (
-    <Box w='100%' align='center'>
+    <Box w="100%" align="center">
       <LinkBox cursor={'pointer'}>
-        <Image src={thumbnail} alt={title}
-        className='grid-item-thumbnail'
-        placeholder='blur'
-        loading='lazy'
+        <Image
+          src={thumbnail}
+          alt={title}
+          className="grid-item-thumbnail"
+          placeholder="blur"
+          loading="lazy"
         />
-        <LinkOverlay href={href} target='_blank'>
-        <Text mt={2}>{title}</Text>
+        <LinkOverlay href={href} target="_blank">
+          <Text mt={2}>{title}</Text>
         </LinkOverlay>
         <Text fontSize={14}>{children}</Text>
       </LinkBox>
@@ -26,17 +23,21 @@ export const GridItem = ({ children, href, title, thumbnail }) => {
   )
 }
 
-export const ProjectGridItem = ({ children, id, title,thumbnail }) => {
-  return(
-    <Box w={'100%'} align='center'>
+export const ProjectGridItem = ({ children, id, title, thumbnail }) => {
+  return (
+    <Box w={'100%'} align="center">
       <NextLink href={`/projects/${id}`}>
         <LinkBox cursor={'pointer'}>
-          <Image src={thumbnail} alt={title} className='grid-item-thumbnail'
-          placeholder='blur' />
+          <Image
+            src={thumbnail}
+            alt={title}
+            className="grid-item-thumbnail"
+            placeholder="blur"
+          />
           <LinkOverlay href={`/projects/${id}`}>
-          <Text mt={2} fontSize={20}>
-            {title}
-          </Text>
+            <Text mt={2} fontSize={20}>
+              {title}
+            </Text>
           </LinkOverlay>
           <Text fontSize={14}>{children}</Text>
         </LinkBox>
@@ -46,7 +47,8 @@ export const ProjectGridItem = ({ children, id, title,thumbnail }) => {
 }
 
 export const GridItemStyle = () => {
-  <Global styles={`
+  ;<Global
+    styles={`
     .grid-item-thumbnail {
       border-radius: 12px;
     }

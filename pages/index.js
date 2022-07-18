@@ -1,28 +1,41 @@
+import NextLink from 'next/link'
 import {
   Container,
   Box,
   Heading,
   Image,
-  useColorModeValue,
   Button
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import Typewriter from 'typewriter-effect'
 
+import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
   return (
+    <Layout>
     <Container>
       <Box
         borderRadius={'lg'}
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         p={3}
         mb={6}
         align="center"
+        fontSize={20}
       >
-        Hello, I&apos;m a full-stack developer from India
+        <Typewriter 
+        onInit={(typewriter) => {
+          typewriter
+            .changeDelay(45)
+            .typeString("Hello, I'm a full-stack developer")
+            .pauseFor(1000)
+            .deleteChars(22)
+            .typeString("based in India")
+            .start();
+        }}
+      />
       </Box>
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
@@ -54,15 +67,17 @@ const Page = () => {
           Work
         </Heading>
         <Paragraph>
-          I&apos;ve worked for Microsoft IDC for five years and am very
+          I&apos;ve worked in Microsoft India for many years and am very
           comfortable with working in large teams and codebases. Having worked
           on products like Windows and Office for Android, I have a great
           appreciation for developing scalable and maintainable solutions.
         </Paragraph>
         <Box align="center" my={4}>
+        <NextLink href="/projects" passHref>
           <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
             Projects
           </Button>
+          </NextLink>
         </Box>
       </Section>
       <Section delay={0.2}>
@@ -87,6 +102,7 @@ const Page = () => {
         <Paragraph>Reading, Writing, Football, Videogames</Paragraph>
       </Section>
     </Container>
+    </Layout>
   )
 }
 

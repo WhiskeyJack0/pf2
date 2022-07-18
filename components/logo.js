@@ -11,13 +11,17 @@ const LogoBox = styled.span`
   height: 30px;
   line-height: 20px;
   padding: 10px;
+  
+  & img {
+    transition: all 0.3s ease-in-out 0s;
+  }
 
   &:hover img {
-    transform: rotate(20deg);
+    transform: scale(1.2);
   }
 `
 const Logo = () => {
-  const logoImage = `/images/logo.png`
+  const logoImage = `/images/logo${useColorModeValue('','-dark')}.png`
 
   return (
     <Link href={'/'}>
