@@ -15,14 +15,15 @@ import NotFoundDark from '../public/images/lotr-404-dark.png'
 import NotFoundLight from '../public/images/lotr-404-light.png'
 
 const NotFound = () => {
-  const NotFoundImage = `/images/lotr-404-`
+  const NotFoundImage = `/images/LOTR-`
   return(
     <Container h={'100vh'}>
       <Center h={'100%'} flexDirection={'column'}>
       <Image
           src={`${NotFoundImage}${useColorModeValue('dark','light')}.png`}
+          layout={'fixed'}
           width={400}
-          height={141}
+          height={266}
           alt={'Page not found'}
           loading="lazy"
         />
