@@ -71,9 +71,6 @@ const Navbar = props => {
           <LinkItem href="/projects" path={path}>
             Projects
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
-          </LinkItem>
         </Stack>
         <Box flex={1} align="right">
           <ColorModeSwitch />
@@ -92,10 +89,7 @@ const Navbar = props => {
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
-                </NextLink>
-                <MenuItem as={Link} href="mailto:r.sandeepan@gmail.com">
+                <MenuItem as={Link} href="mailto:contact@sandeepanroy.com">
                   Contact
                 </MenuItem>
               </MenuList>
