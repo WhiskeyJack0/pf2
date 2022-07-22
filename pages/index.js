@@ -24,15 +24,19 @@ const Page = () => {
         mb={6}
         align="center"
         fontSize={20}
-      >
+      >Hello, I&apos;m 
         <Typewriter 
+        options={{
+          loop: true
+        }}
         onInit={(typewriter) => {
           typewriter
             .changeDelay(45)
-            .typeString("Hello, I'm a full-stack developer")
+            .typeString("a full-stack developer")
             .pauseFor(1000)
             .deleteChars(22)
             .typeString("based in India")
+            .pauseFor(1000)
             .start();
         }}
       />
