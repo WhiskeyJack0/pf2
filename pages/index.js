@@ -7,7 +7,6 @@ import {
   Button
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import Typewriter from 'typewriter-effect'
 
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -18,29 +17,6 @@ const Page = () => {
   return (
     <Layout>
     <Container>
-      <Box
-        borderRadius={'lg'}
-        p={3}
-        mb={6}
-        align="center"
-        fontSize={20}
-      >Hello, I&apos;m 
-        <Typewriter 
-        options={{
-          loop: true
-        }}
-        onInit={(typewriter) => {
-          typewriter
-            .changeDelay(45)
-            .typeString("a full-stack developer")
-            .pauseFor(1000)
-            .deleteChars(22)
-            .typeString("based in India")
-            .pauseFor(1000)
-            .start();
-        }}
-      />
-      </Box>
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant={'page-title'}>

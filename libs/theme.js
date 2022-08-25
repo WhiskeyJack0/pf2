@@ -20,6 +20,15 @@ const components = {
         textDecorationThickness: 4,
         marginTop: 3,
         marginBottom: 4
+      },
+      'collapsible-title': {
+        textDecoration: 'underline',
+        fontSize: 16,
+        textUnderlineOffset: 6,
+        textDecorationColor: '#525252',
+        textDecorationThickness: 3,
+        marginTop: 3,
+        marginBottom: 4
       }
     }
   },

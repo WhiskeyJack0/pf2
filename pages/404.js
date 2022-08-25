@@ -11,9 +11,6 @@ import {
   Center
 } from '@chakra-ui/react'
 
-import NotFoundDark from '../public/images/lotr-404-dark.png'
-import NotFoundLight from '../public/images/lotr-404-light.png'
-
 const NotFound = () => {
   const NotFoundImage = `/images/LOTR-`
   return(
