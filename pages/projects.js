@@ -10,7 +10,7 @@ import thumbWDIP from '../public/images/projects/wdip-2x.png'
 
 const Projects = () => {
   return (
-    <Layout title={'test'}>
+    <Layout title={'Projects'}>
       <Container>
         <Heading as="h3" fontSize={20} mb={4}>
           Projects
